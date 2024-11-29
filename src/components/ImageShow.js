@@ -7,16 +7,18 @@ const ImageShow = ({ image }) => {
   };
   return (
     <div style={{ position: "relative", textAlign: "center" }}>
-      <img src={image} />
+      <img
+        src={image}
+        onClick={increaseEmojiSize}
+        style={{ cursor: "pointer" }}
+      />
       <div
         style={{
-          cursor: "pointer",
           position: "absolute",
           bottom: "10px",
           right: "10px",
           fontSize: `${emojiSize}px`,
         }}
-        onClick={increaseEmojiSize}
       >
         👍
       </div>
